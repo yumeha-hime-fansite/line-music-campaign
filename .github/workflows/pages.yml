@@ -1,0 +1,79 @@
+name: Deploy production and develop to GitHub Pages
+
+on:
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: prod
+
+      - name: Checkout develop branch
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          path: dev
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build production
+        working-directory: prod
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}
+          PUBLIC_SITE_VARIANT: production
+          PUBLIC_CLARITY_ID: ${{ secrets.CLARITY_PROJECT_ID }}
+        run: |
+          npm install
+          npm run build
+
+      - name: Build develop
+        working-directory: dev
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/develop
+          PUBLIC_SITE_VARIANT: develop
+          PUBLIC_CLARITY_ID: ''
+        run: |
+          npm install
+          npm run build
+
+      - name: Assemble Pages artifact
+        run: |
+          mkdir -p _site/develop
+          cp -a prod/build/. _site/
+          cp -a dev/build/. _site/develop/
+          touch _site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

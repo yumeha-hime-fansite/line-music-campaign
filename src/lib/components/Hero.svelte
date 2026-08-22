@@ -6,7 +6,7 @@
   const imageSrc = campaign.individualCampaignImage ? `${base}${campaign.individualCampaignImage}` : '';
 </script>
 
-<section class="hero section-shell" aria-labelledby="hero-title">
+<section class:hero-single={!imageSrc} class="hero section-shell" aria-labelledby="hero-title">
   <div class="hero-copy">
     <p class="eyebrow">夢羽ヒメ LINE MUSIC 再生キャンペーン</p>
     <h1 id="hero-title">ヒメさんの新曲を<br /><span>LINE MUSICで応援しよう！</span></h1>
@@ -26,16 +26,9 @@
     <p class="microcopy">たくさん再生するのは、そのあとでもOK。</p>
   </div>
 
-  <div class="hero-visual" aria-hidden={!imageSrc}>
-    {#if imageSrc}
+  {#if imageSrc}
+    <div class="hero-visual">
       <img src={imageSrc} alt={`${campaign.songTitle} 再生キャンペーン`} />
-    {:else}
-      <div class="visual-placeholder">
-        <span class="note note-a">♪</span>
-        <span class="note note-b">♫</span>
-        <div class="disc"><span>♪</span></div>
-        <p>キャンペーン画像<br />掲載予定</p>
-      </div>
-    {/if}
-  </div>
+    </div>
+  {/if}
 </section>

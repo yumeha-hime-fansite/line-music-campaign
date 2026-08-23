@@ -2,7 +2,7 @@
   import { campaign } from '$lib/data/campaign';
 
   const formatter = new Intl.NumberFormat('ja-JP');
-  const hourPresets = [0.5, 1, 2, 4, 8];
+  const hourPresets = [1, 4, 8, 12, 24];
 
   let hoursPerDay = 1;
 

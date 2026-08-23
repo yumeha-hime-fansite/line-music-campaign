@@ -11,7 +11,7 @@
   import Application from '$lib/components/Application.svelte';
   import FinalCTA from '$lib/components/FinalCTA.svelte';
   import PlayCTA from '$lib/components/PlayCTA.svelte';
-
+  import MorePlayTeaser from '$lib/components/MorePlayTeaser.svelte';
   const ogImage = campaign.ogImage ? `${base}${campaign.ogImage}` : '';
 </script>
 
@@ -40,6 +40,7 @@
   </section>
 
   <Application />
+  <MorePlayTeaser />
   <FAQ />
   <FinalCTA />
 

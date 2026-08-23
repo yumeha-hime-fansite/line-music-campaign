@@ -39,13 +39,12 @@
     <PlayCTA label="LINE MUSICで再生する" placement="mid-play" />
   </section>
 
-  <FAQ />
   <Application />
+  <FAQ />
   <FinalCTA />
 
   <footer class="site-footer">
     <p>このサイトはファンによる非公式の参加ガイドです。各キャンペーンの正式な条件は公式案内を優先してください。</p>
-    <p>Microsoft Clarityを利用したアクセス解析は本番サイトでのみ有効化する設計です。</p>
   </footer>
 </main>
 

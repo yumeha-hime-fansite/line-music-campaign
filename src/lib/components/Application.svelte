@@ -5,8 +5,8 @@
 <section class="content-section application-section" aria-labelledby="application-title">
   <div class="section-heading">
     <p class="eyebrow">DON'T FORGET</p>
-    <h2 id="application-title">特典への応募も忘れずに！</h2>
-    <p>キャンペーンによっては、再生したあとに応募手続きが必要です。</p>
+    <h2 id="application-title">個人特典を目指す方は、応募も忘れずに！</h2>
+    <p>今回の個人再生数プレゼントは、対象回数を達成したあとに応募フォームからの申請が必要です。</p>
   </div>
 
   <ol class="application-flow">

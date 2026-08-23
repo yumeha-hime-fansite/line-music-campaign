@@ -21,15 +21,21 @@
       {#if individualImage}
         <img class="campaign-image" src={individualImage} alt="個人再生数プレゼントのキャンペーン案内" />
       {/if}
+
       <div class="reward-list">
         {#each campaign.individualRewards as reward}
           <div class="reward-item">
-            {#if reward.plays}<strong>{reward.plays.toLocaleString()}回</strong>{/if}
-            <h3>{reward.title}</h3>
-            <p>{reward.description}</p>
+            {#if reward.plays}
+              <strong class="reward-plays">{reward.plays.toLocaleString()}回</strong>
+            {/if}
+            <div>
+              <h3>{reward.title}</h3>
+              {#if reward.description}<p>{reward.description}</p>{/if}
+            </div>
           </div>
         {/each}
       </div>
+
       <p class="friendly-note">「グッズが気になるから参加してみたい！」というきっかけでも、もちろんOK。</p>
     </article>
 
@@ -38,6 +44,7 @@
       {#if totalImage}
         <img class="campaign-image" src={totalImage} alt="総再生回数企画のキャンペーン案内" />
       {/if}
+
       <ol class="milestone-list">
         {#each campaign.totalMilestones as milestone, index}
           <li>
@@ -50,6 +57,7 @@
           </li>
         {/each}
       </ol>
+
       <p class="friendly-note">一人ひとりの再生が集まることで、ヒメさんへの大きな応援につながります。</p>
     </article>
   </div>

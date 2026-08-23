@@ -12,6 +12,7 @@
   import FinalCTA from '$lib/components/FinalCTA.svelte';
   import PlayCTA from '$lib/components/PlayCTA.svelte';
   import MorePlayTeaser from '$lib/components/MorePlayTeaser.svelte';
+  import MainQuickNav from '$lib/components/MainQuickNav.svelte';
   const ogImage = campaign.ogImage ? `${base}${campaign.ogImage}` : '';
 </script>
 
@@ -28,6 +29,7 @@
 <main>
   <Hero />
   <Steps />
+  <MainQuickNav />
   <CampaignInfo />
   <BeginnerGuide />
   <PlayCountGuide />

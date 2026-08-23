@@ -162,9 +162,28 @@
     <a class="back-button" href={`${base}/`}>← 基本の参加ガイドへ戻る</a>
   </section>
 
-  <footer class="site-footer">
-    <p>このページはファンによる非公式の情報共有ページです。</p>
-  </footer>
+<footer class="site-footer">
+  <p>
+    このサイトはファンによる非公式の参加ガイドです。
+    LINE MUSICおよびアーティスト・関係各所の公式サイトではありません。
+    正式なキャンペーン条件は、公式案内をご確認ください。
+  </p>
+
+  <div class="footer-notes">
+    <p>
+      ※掲載しているキャンペーン画像等は、関係各所より掲載許可を得たものを使用しています。
+      無断転載・二次利用はご遠慮ください。
+    </p>
+    <p>
+      ※掲載されている画像等の著作権・肖像権その他の権利は、それぞれの権利者に帰属します。
+    </p>
+  </div>
+
+  <p class="footer-contact">
+    お問い合わせ：
+    <a href="mailto:amagase.sui@gmail.com">amagase.sui@gmail.com</a>
+  </p>
+</footer>
 </main>
 
 <style>

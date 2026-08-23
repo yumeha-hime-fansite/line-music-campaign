@@ -32,11 +32,6 @@
     <p class="microcopy">たくさん再生するのは、そのあとでもOK。</p>
   </div>
 
-  {#if imageSrc}
-    <div class="hero-visual">
-      <img src={imageSrc} alt={`${campaign.songTitle} 再生キャンペーン`} />
-    </div>
-  {/if}
 
   <style>
     .fan-guide-label {

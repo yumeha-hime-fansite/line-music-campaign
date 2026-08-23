@@ -11,16 +11,22 @@
   import Application from '$lib/components/Application.svelte';
   import FinalCTA from '$lib/components/FinalCTA.svelte';
   import PlayCTA from '$lib/components/PlayCTA.svelte';
+  import MorePlayTeaser from '$lib/components/MorePlayTeaser.svelte';
+  import MainQuickNav from '$lib/components/MainQuickNav.svelte';
 
-  const ogImage = campaign.ogImage ? `${base}${campaign.ogImage}` : '';
+  const siteOrigin = 'https://yumeha-hime-fansite.github.io';
+  const canonicalUrl = `${siteOrigin}${base}/`;
+  const ogImage = campaign.ogImage ? `${siteOrigin}${base}${campaign.ogImage}` : '';
 </script>
 
 <svelte:head>
   <title>{campaign.artistName}｜LINE MUSIC再生キャンペーン参加ガイド</title>
-  <meta name="description" content={`${campaign.artistName}「${campaign.songTitle}」のLINE MUSIC再生キャンペーンに、初めてでも迷わず参加するための非公式ガイド。`} />
+  <meta name="description" content={`${campaign.artistName}「${campaign.songTitle}」のLINE MUSIC再生キャンペーンに、初めてでも迷わず参加するためのファンによる非公式ガイド。`} />
+  <link rel="canonical" href={canonicalUrl} />
   <meta property="og:title" content={`${campaign.artistName}｜LINE MUSIC再生キャンペーン参加ガイド`} />
   <meta property="og:description" content="難しそうに見える再生キャンペーンも、まずは1回聴くところから。" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
   {#if ogImage}<meta property="og:image" content={ogImage} />{/if}
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -28,23 +34,25 @@
 <main>
   <Hero />
   <Steps />
+  <MainQuickNav />
   <CampaignInfo />
   <BeginnerGuide />
   <PlayCountGuide />
   <CountRules />
 
   <section class="mid-cta content-section" aria-label="再生案内">
-    <p>ここまで分かれば、もう準備OK！</p>
-    <h2>難しく考えず、まずはヒメさんの曲を楽しもう。</h2>
+    <p>ここまで分かれば、もう準備OK。</p>
+    <h2>難しく考えすぎず、まずはヒメさんの曲を楽しんでみよう。</h2>
     <PlayCTA label="LINE MUSICで再生する" placement="mid-play" />
   </section>
 
   <Application />
   <FAQ />
+  <MorePlayTeaser />
   <FinalCTA />
 
   <footer class="site-footer">
-    <p>このサイトはファンによる非公式の参加ガイドです。各キャンペーンの正式な条件は公式案内を優先してください。</p>
+    <p>このサイトはファンによる非公式の参加ガイドです。正式な条件はキャンペーン公式案内をご確認ください。</p>
   </footer>
 </main>
 

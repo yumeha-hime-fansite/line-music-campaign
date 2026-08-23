@@ -10,7 +10,7 @@
   <div class="section-heading">
     <p class="eyebrow">FIRST TIME</p>
     <h2 id="beginner-title">LINE MUSICが初めての方へ</h2>
-    <p>ここからは、上の3ステップを実際の操作順にもう少し詳しく説明します。</p>
+    <p>ここからは、上の3ステップを実際の操作順にもう少し詳しく見ていきます。</p>
   </div>
 
   <div class="mini-guide">
@@ -20,8 +20,8 @@
         <h3>アプリを入れる</h3>
         <p>スマートフォンにLINE MUSICをインストールします。</p>
         <div class="store-links" aria-label="LINE MUSICアプリのダウンロード">
-          <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" aria-label="App StoreでLINE MUSICを開く">App Store（iPhone / iPad）</a>
-          <a href={googlePlayUrl} target="_blank" rel="noopener noreferrer" aria-label="Google PlayでLINE MUSICを開く">Google Play（Android）</a>
+          <a href={appStoreUrl} target="_blank" rel="noopener noreferrer">App Store（iPhone / iPad）</a>
+          <a href={googlePlayUrl} target="_blank" rel="noopener noreferrer">Google Play（Android）</a>
         </div>
       </div>
     </article>
@@ -38,7 +38,7 @@
       <span>3</span>
       <div>
         <h3>フル再生できるようにする</h3>
-        <p>無料の未登録状態ではフル再生できません。フル再生できるプランへの登録が必要です。</p>
+        <p>プラン未登録の状態ではフル再生できないため、フル再生できるプランへの登録が必要です。</p>
       </div>
     </article>
 
@@ -46,7 +46,7 @@
       <span>4</span>
       <div>
         <h3>このページから対象曲を開く</h3>
-        <p>検索するより、対象曲リンクから直接開くのが迷いません。</p>
+        <p>検索せず、対象曲へのボタンから直接開けば迷いにくいです。</p>
       </div>
     </article>
 

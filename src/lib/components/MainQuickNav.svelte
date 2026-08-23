@@ -8,16 +8,12 @@
     { label: '再生のポイント', href: '#rules-title' },
     { label: '応募', href: '#application-title' },
     { label: 'FAQ', href: '#faq-title' },
-    { label: 'もっと再生', href: `${base}/more-play/` }
+    { label: 'もう少し応援', href: `${base}/more-play/` }
   ];
 </script>
 
 <div class="main-quick-nav section-shell">
-  <CompactQuickNav
-    label="知りたいところへ"
-    ariaLabel="メインページの案内"
-    {items}
-  />
+  <CompactQuickNav label="知りたいところへ" ariaLabel="メインページの案内" {items} />
 </div>
 
 <style>

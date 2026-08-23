@@ -12,12 +12,12 @@
   <div class="section-heading">
     <p class="eyebrow">CAMPAIGN</p>
     <h2 id="campaign-title">今回のキャンペーン</h2>
-    <p><strong>{campaign.songTitle}</strong> を聴いて、キャンペーンに参加しよう。</p>
+    <p><strong>{campaign.songTitle}</strong> を聴くと、今回の再生キャンペーンの応援につながります。</p>
   </div>
 
   <div class="campaign-grid">
     <article class="campaign-card reward-card">
-      <div class="card-kicker">🎁 あなたがもらえる特典</div>
+      <div class="card-kicker">🎁 個人再生数でもらえる特典</div>
       {#if individualImage}
         <img class="campaign-image" src={individualImage} alt="個人再生数プレゼントのキャンペーン案内" />
       {/if}
@@ -36,11 +36,11 @@
         {/each}
       </div>
 
-      <p class="friendly-note">「グッズが気になるから参加してみたい！」というきっかけでも、もちろんOK。</p>
+      <p class="friendly-note">特典の回数まで届かなくても、その再生は総再生数の応援になります。</p>
     </article>
 
     <article class="campaign-card milestone-card">
-      <div class="card-kicker">🌟 みんなで目指す特典</div>
+      <div class="card-kicker">🌟 総再生数で解放される特典</div>
       {#if totalImage}
         <img class="campaign-image" src={totalImage} alt="総再生回数企画のキャンペーン案内" />
       {/if}
@@ -58,12 +58,12 @@
         {/each}
       </ol>
 
-      <p class="friendly-note">一人ひとりの再生が集まることで、ヒメさんへの大きな応援につながります。</p>
+      <p class="friendly-note">50万・70万・100万回は、参加しているみんなの合計です。1人で目指す数字ではありません。</p>
     </article>
   </div>
 
-  <PlayCTA label="対象曲を再生する" placement="campaign-play" />
+  <PlayCTA label="対象曲を聴いてみる" placement="campaign-play" />
   {#if campaign.officialCampaignUrl}
-    <a class="text-link" href={campaign.officialCampaignUrl} target="_blank" rel="noopener noreferrer">公式キャンペーン詳細を見る ↗</a>
+    <a class="text-link" href={campaign.officialCampaignUrl} target="_blank" rel="noopener noreferrer">公式のキャンペーン案内を見る ↗</a>
   {/if}
 </section>

@@ -12,7 +12,7 @@
 <nav class="quick-nav" aria-label={ariaLabel}>
   <p class="quick-nav-label">{label}</p>
 
-  <div class="quick-nav-scroll">
+  <div class="quick-nav-items">
     {#each items as item}
       <a href={item.href}>{item.label}</a>
     {/each}
@@ -20,10 +20,7 @@
 </nav>
 
 <style>
-  .quick-nav {
-    min-width: 0;
-  }
-
+  .quick-nav { min-width: 0; }
   .quick-nav-label {
     margin: 0 0 7px;
     color: var(--muted);
@@ -31,23 +28,13 @@
     font-weight: 800;
   }
 
-  .quick-nav-scroll {
+  .quick-nav-items {
     display: flex;
+    flex-wrap: wrap;
     gap: 7px;
-    overflow-x: auto;
-    padding: 1px 1px 5px;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline proximity;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
   }
 
-  .quick-nav-scroll::-webkit-scrollbar {
-    display: none;
-  }
-
-  .quick-nav-scroll a {
-    flex: 0 0 auto;
+  .quick-nav-items a {
     min-height: 38px;
     display: inline-flex;
     align-items: center;
@@ -61,32 +48,21 @@
     font-weight: 800;
     line-height: 1.2;
     text-decoration: none;
-    scroll-snap-align: start;
     transition: background .16s ease, border-color .16s ease, transform .16s ease;
   }
 
-  .quick-nav-scroll a:hover {
+  .quick-nav-items a:hover {
     border-color: var(--lavender-light);
     background: var(--surface-soft);
     transform: translateY(-1px);
   }
 
-  .quick-nav-scroll a:focus-visible {
+  .quick-nav-items a:focus-visible {
     outline: 3px solid var(--lavender-light);
     outline-offset: 2px;
   }
 
-  @media (min-width: 780px) {
-    .quick-nav-scroll {
-      flex-wrap: wrap;
-      overflow: visible;
-      padding-bottom: 0;
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    .quick-nav-scroll a {
-      transition: none;
-    }
+    .quick-nav-items a { transition: none; }
   }
 </style>

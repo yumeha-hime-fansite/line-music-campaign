@@ -2,11 +2,19 @@
   import { base } from '$app/paths';
   import { campaign } from '$lib/data/campaign';
   import PlayCalculator from '$lib/components/PlayCalculator.svelte';
+  import PlayCalculator from '$lib/components/PlayCalculator.svelte';
 
   const siteOrigin = 'https://yumeha-hime-fansite.github.io';
   const canonicalUrl = `${siteOrigin}${base}/more-play/`;
   const ogImage = campaign.ogImage ? `${siteOrigin}${base}${campaign.ogImage}` : '';
   const lineMusicDeviceHelpUrl = 'https://help2.line.me/LINEMusic/?contentId=20022053&lang=ja';
+const morePlayNavItems = [
+  { label: '1台を安定', href: '#stable-title' },
+  { label: '複数スマホ', href: '#multi-title' },
+  { label: '再生数計算', href: '#calculator-title' },
+  { label: '止まってない？', href: '#watch-title' },
+  { label: 'PC利用', href: '#emulator-title' }
+];
 </script>
 
 <svelte:head>
@@ -48,6 +56,14 @@
       <p><strong>試す場合は、あくまで自己責任でお願いします。</strong></p>
     </div>
   </section>
+
+<div class="sub-quick-nav section-shell">
+  <CompactQuickNav
+    label="気になるところへ"
+    ariaLabel="このページの案内"
+    items={morePlayNavItems}
+  />
+</div>
 
   <section class="content-section" aria-labelledby="stable-title">
     <div class="section-heading">
@@ -549,4 +565,8 @@
       grid-template-columns: 1fr;
     }
   }
+.sub-quick-nav {
+  margin-top: -38px;
+  margin-bottom: -28px;
+}
 </style>

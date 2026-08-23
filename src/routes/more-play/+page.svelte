@@ -8,24 +8,25 @@
   const canonicalUrl = `${siteOrigin}${base}/more-play/`;
   const ogImage = campaign.ogImage ? `${siteOrigin}${base}${campaign.ogImage}` : '';
   const lineMusicDeviceHelpUrl = 'https://help2.line.me/LINEMusic/?contentId=20022053&lang=ja';
-const morePlayNavItems = [
-  { label: '1台を安定', href: '#stable-title' },
-  { label: '複数スマホ', href: '#multi-title' },
-  { label: '再生数計算', href: '#calculator-title' },
-  { label: '止まってない？', href: '#watch-title' },
-  { label: 'PC利用', href: '#emulator-title' }
-];
+
+  const morePlayNavItems = [
+    { label: 'まず1台', href: '#stable-title' },
+    { label: '再生数の目安', href: '#calculator-section' },
+    { label: '余っている端末', href: '#device-title' },
+    { label: '止まってない？', href: '#watch-title' },
+    { label: 'PC利用', href: '#emulator-title' }
+  ];
 </script>
 
 <svelte:head>
-  <title>もう少し再生に協力したい人へ｜LINE MUSIC再生キャンペーン</title>
+  <title>もう少し聴いて応援してみたい人へ｜LINE MUSIC再生キャンペーン</title>
   <meta
     name="description"
-    content="LINE MUSIC再生キャンペーンでもう少し再生に協力したい方向けに、複数端末での再生など、一参加者として試したこと・知った方法をまとめた非公式ページです。"
+    content="LINE MUSIC再生キャンペーンでもう少し聴いて応援してみたい人向けに、一参加者として試したこと・調べたことをまとめた非公式ページです。"
   />
   <link rel="canonical" href={canonicalUrl} />
-  <meta property="og:title" content="もう少し再生に協力したい人へ｜LINE MUSIC再生キャンペーン" />
-  <meta property="og:description" content="余っているスマホも使ってみようかな、と思ったときの参考に。" />
+  <meta property="og:title" content="もう少し聴いて応援してみたい人へ｜LINE MUSIC再生キャンペーン" />
+  <meta property="og:description" content="まずは今の1台を安定させるところから。自分のペースで続けたい人向けの参考ページです。" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content={canonicalUrl} />
   {#if ogImage}<meta property="og:image" content={ogImage} />{/if}
@@ -35,13 +36,13 @@ const morePlayNavItems = [
   <section class="subhero section-shell" aria-labelledby="more-play-title">
     <a class="back-link" href={`${base}/`}>← 基本の参加ガイドへ</a>
     <p class="eyebrow">MORE SUPPORT</p>
-    <h1 id="more-play-title">もう少し再生に<br /><span>協力してみたい人へ</span></h1>
+    <h1 id="more-play-title">もう少し聴いて<br /><span>応援してみたい人へ</span></h1>
     <p class="subhero-lead">
       1台での再生には慣れてきた。<br />
-      「もう少し再生数を増やして、推しの応援に協力できないかな」と思ったときの参考に、
-      自分が試していることや知った方法をまとめています。
+      「もう少し続けてみようかな」と思ったときに、自分が意識していることや
+      調べたことをまとめています。
     </p>
-    <p class="subhero-soft"><strong>最初から何台も使う必要はありません。</strong></p>
+    <p class="subhero-soft"><strong>今の1台のままでも、もちろん十分です。</strong></p>
   </section>
 
   <section class="content-section intro-section" aria-labelledby="about-title">
@@ -49,27 +50,26 @@ const morePlayNavItems = [
       <p class="notice-label">このページについて</p>
       <h2 id="about-title">一参加者としての情報共有です</h2>
       <p>
-        このページでは、自分で試した方法や、LINE MUSIC公式の動作保証外となる方法についても触れています。
-        同じように動作することや、再生回数へ反映されることを保証するものではありません。
-        今後の仕様変更などで使えなくなる可能性もあります。
+        ここでは、自分で試したことや、LINE MUSIC公式の案内を見ながら知ったことをまとめています。
+        公式に案内された方法ではないものもあるため、自分の環境ではこうだった、という一例として
+        見てもらえたらと思います。
       </p>
-      <p><strong>試す場合は、あくまで自己責任でお願いします。</strong></p>
     </div>
   </section>
 
-<div class="sub-quick-nav section-shell">
-  <CompactQuickNav
-    label="気になるところへ"
-    ariaLabel="このページの案内"
-    items={morePlayNavItems}
-  />
-</div>
+  <div class="sub-quick-nav section-shell">
+    <CompactQuickNav
+      label="気になるところへ"
+      ariaLabel="このページの案内"
+      items={morePlayNavItems}
+    />
+  </div>
 
   <section class="content-section" aria-labelledby="stable-title">
     <div class="section-heading">
       <p class="eyebrow">FIRST CHECK</p>
-      <h2 id="stable-title">まずは、今の1台が止まっていないか確認</h2>
-      <p>長時間流していると、気づかないうちに止まっていることもあります。</p>
+      <h2 id="stable-title">まずは、今の1台を安定させる</h2>
+      <p>長く流していると、気づかないうちに止まっていることもあります。</p>
     </div>
 
     <div class="check-card">
@@ -80,112 +80,86 @@ const morePlayNavItems = [
       </ul>
     </div>
 
-    <p class="personal-note">自分も、台数を増やすこと以上に<strong>止まっている時間を減らすこと</strong>は意識しています。</p>
+    <p class="personal-note">
+      自分も、台数を増やすことより先に<strong>止まっている時間を減らすこと</strong>を意識しています。
+    </p>
   </section>
 
-  <section class="content-section" aria-labelledby="multi-title">
-    <div class="section-heading">
-      <p class="eyebrow">MORE DEVICES</p>
-      <h2 id="multi-title">余っているスマホがあれば、もう1台</h2>
-      <p>昔使っていたAndroidやiPhoneが手元にあれば、追加の再生端末として使う方法もあります。</p>
-    </div>
-
-    <ol class="device-flow">
-      <li>
-        <span>01</span>
-        <div><h3>対象曲をダウンロード</h3><p>使いたい端末に、対象曲をあらかじめ保存しておきます。</p></div>
-      </li>
-      <li>
-        <span>02</span>
-        <div><h3>オフライン状態で再生開始</h3><p>端末をオフライン状態にして、LINE MUSICで対象曲を再生します。</p></div>
-      </li>
-      <li>
-        <span>03</span>
-        <div><h3>再生後にオンラインへ戻す</h3><p>再生が始まったら、端末をオンライン状態へ戻します。</p></div>
-      </li>
-    </ol>
-
-    <div class="experience-card">
-      <p>
-        自分の環境では、この方法で<strong>最大10台まで並行して動いたことがあります。</strong>
-        ただし、LINE MUSIC公式が案内・保証している複数端末再生方法ではなく、
-        同じ動作や再生回数への反映を保証するものでもありません。
-      </p>
-      <p>最初から10台という話ではなく、余っているスマホが1台あれば試してみる、くらいでも選択肢のひとつになると思います。</p>
-    </div>
-
-    <aside class="device-limit-card" aria-labelledby="device-limit-title">
-      <div class="limit-icon" aria-hidden="true">!</div>
-      <div>
-        <h3 id="device-limit-title">端末を追加するときにひとつ注意</h3>
-        <p>
-          LINE MUSICで楽曲をダウンロードするには端末登録が必要です。
-          現在のLINE MUSICヘルプでは、<strong>端末登録は1年間で10台まで、登録端末の削除は1年間で5回まで</strong>と案内されています。
-          どちらも毎年1月1日にリセットされます。
-        </p>
-        <p>端末を入れ替えながら試す場合は、登録だけでなく削除回数の上限にも注意です。</p>
-        <a href={lineMusicDeviceHelpUrl} target="_blank" rel="noopener noreferrer">LINE MUSICヘルプで確認する ↗</a>
-      </div>
-    </aside>
-  </section>
-
-  <section class="content-section calculator-section" aria-label="理論再生回数計算">
+  <section id="calculator-section" class="content-section calculator-section" aria-label="再生回数の目安">
     <PlayCalculator />
+  </section>
+
+  <section class="content-section" aria-labelledby="device-title">
+    <div class="section-heading">
+      <p class="eyebrow">SPARE DEVICE</p>
+      <h2 id="device-title">余っている端末があるなら、使い方を考える選択肢も</h2>
+      <p>
+        昔使っていたスマホなどが手元にある場合、LINE MUSICを使える端末として活用できないか
+        考える人もいると思います。
+      </p>
+    </div>
+
+    <div class="reference-card">
+      <h3>ここでは、同時再生を回避する具体的な手順は紹介しません</h3>
+      <p>
+        LINE MUSICには端末登録や再生に関するルールがあり、キャンペーンごとの条件もあります。
+        複数端末を使う場合は、まず公式ヘルプや今回のキャンペーン案内を確認するのが安心です。
+      </p>
+      <p>
+        「余っている端末があるから、何か使えるかな」くらいの参考情報として載せています。
+      </p>
+      <a href={lineMusicDeviceHelpUrl} target="_blank" rel="noopener noreferrer">LINE MUSICの端末ヘルプを見る ↗</a>
+    </div>
   </section>
 
   <section class="content-section" aria-labelledby="watch-title">
     <div class="section-heading">
       <p class="eyebrow">KEEP AN EYE</p>
-      <h2 id="watch-title">台数を増やしたら、ときどき様子を見る</h2>
-      <p>「全部動いていると思ったら、何台か止まっていた」ということもあります。</p>
+      <h2 id="watch-title">長く流すなら、ときどき様子を見る</h2>
+      <p>ずっと見張る必要はありませんが、途中で止まっていないかだけ確認すると安心です。</p>
     </div>
 
     <div class="stop-grid">
       <article><span aria-hidden="true">⏸</span><h3>曲が停止</h3><p>途中で再生が止まっている。</p></article>
       <article><span aria-hidden="true">×</span><h3>アプリが終了</h3><p>LINE MUSICが落ちている。</p></article>
-      <article><span aria-hidden="true">…</span><h3>一部だけ停止</h3><p>他の端末は動いていて気づきにくい。</p></article>
+      <article><span aria-hidden="true">…</span><h3>気づきにくい停止</h3><p>画面を見ていない間に止まっていることも。</p></article>
     </div>
 
     <p class="personal-note">
-      ずっと見ている必要はありませんが、たまに確認しておくと「いつから止まってたんだ……」を減らせます。
-      台数が増えるほど、この確認も意外と大事になってきます。
+      たまに確認しておくと、「いつから止まってたんだ……」を減らせます。
     </p>
   </section>
 
   <section class="content-section" aria-labelledby="emulator-title">
     <div class="section-heading">
       <p class="eyebrow">REFERENCE</p>
-      <h2 id="emulator-title">PC＋Androidエミュレータという方法も</h2>
-      <p>スマートフォンの実機以外の方法として、こうした利用例もあるようです。</p>
+      <h2 id="emulator-title">参考：PC・Androidエミュレータについて</h2>
+      <p>実機以外の利用例として見かけることがあります。</p>
     </div>
 
-    <div class="reference-card">
-      <h3>Windows PC上でAndroid環境を動かす方法</h3>
-      <p>
-        Androidエミュレータを使い、PC上でLINE MUSICを利用する方法もあるようです。
-        ただし、AndroidエミュレータはLINE MUSIC公式の動作保証環境として案内されていません。
-      </p>
-      <ul>
-        <li>安定して動き続けること</li>
-        <li>再生回数へ反映されること</li>
-        <li>今後も同じように利用できること</li>
-      </ul>
-      <p>
-        いずれも保証されません。LINE MUSICやエミュレータ側のアップデート・仕様変更などで
-        利用できなくなる可能性もあります。
-      </p>
-      <p class="reference-note">こういう方法もある、くらいの参考情報として載せています。</p>
-    </div>
+    <details class="reference-details">
+      <summary>参考情報を見る</summary>
+      <div class="reference-card">
+        <p>
+          Androidエミュレータを使ってPC上でLINE MUSICを利用する例もありますが、
+          LINE MUSIC公式の動作保証環境として案内されているわけではありません。
+        </p>
+        <p>
+          安定動作や再生回数への反映を保証できるものでもないため、
+          こういう利用例もある、という参考情報に留めています。
+        </p>
+      </div>
+    </details>
   </section>
 
   <section class="content-section closing-section" aria-labelledby="closing-title">
     <p class="eyebrow">AT YOUR PACE</p>
     <h2 id="closing-title">自分に合いそうなところだけ、参考に</h2>
     <p>
-      今使っているスマホで続けるのも、余っている端末をもう1台使ってみるのも。
-      「もう少し再生してみようかな」と思ったときの参考になれば、くらいの気持ちでまとめています。
+      今使っているスマホでそのまま続けるのも十分な応援です。
+      「もう少し続けてみようかな」と思ったときに、使えそうなところだけ参考になればと思います。
     </p>
-    <a class="back-button" href={`${base}/`}>← 基本の再生方法へ戻る</a>
+    <a class="back-button" href={`${base}/`}>← 基本の参加ガイドへ戻る</a>
   </section>
 
   <footer class="site-footer">
@@ -194,15 +168,12 @@ const morePlayNavItems = [
 </main>
 
 <style>
-  .more-play-page {
-    overflow: hidden;
-  }
+  .more-play-page { overflow: hidden; }
 
   .subhero {
     position: relative;
     padding: 54px 0 42px;
   }
-
   .subhero::before {
     content: "";
     position: absolute;
@@ -214,7 +185,6 @@ const morePlayNavItems = [
     border-radius: 50%;
     background: #eee6fb;
   }
-
   .back-link {
     display: inline-block;
     margin-bottom: 34px;
@@ -223,37 +193,19 @@ const morePlayNavItems = [
     font-weight: 800;
     text-decoration: none;
   }
-
-  .back-link:hover {
-    color: var(--lavender-dark);
-  }
-
   .subhero h1 {
     margin: 8px 0 18px;
     font-size: clamp(2rem, 9vw, 3.55rem);
     line-height: 1.25;
     letter-spacing: -.02em;
   }
+  .subhero h1 span { color: var(--lavender-dark); }
+  .subhero-lead { margin: 0; color: var(--muted); }
+  .subhero-soft { margin: 18px 0 0; }
 
-  .subhero h1 span {
-    color: var(--lavender-dark);
-  }
-
-  .subhero-lead {
-    margin: 0;
-    color: var(--muted);
-  }
-
-  .subhero-soft {
-    margin: 18px 0 0;
-  }
-
-  .intro-section {
-    padding-top: 18px;
-  }
+  .intro-section { padding-top: 18px; }
 
   .notice-card,
-  .experience-card,
   .reference-card,
   .check-card {
     border-radius: 22px;
@@ -261,56 +213,46 @@ const morePlayNavItems = [
 
   .notice-card {
     padding: 22px;
-    border: 1px solid #f1df9b;
-    background: var(--yellow-soft);
+    border: 1px solid #e4d7f5;
+    background: #f7f2fd;
   }
-
   .notice-label {
     margin: 0;
-    color: #80661a;
+    color: var(--lavender-dark);
     font-size: .74rem;
     font-weight: 900;
     letter-spacing: .1em;
   }
+  .notice-card h2 { margin: 5px 0 9px; font-size: 1.25rem; }
+  .notice-card p { margin: 0; color: var(--muted); }
 
-  .notice-card h2 {
-    margin: 5px 0 9px;
-    font-size: 1.25rem;
-  }
-
-  .notice-card p {
-    margin: 0;
-  }
-
-  .notice-card p + p {
-    margin-top: 10px;
+  .sub-quick-nav {
+    margin-top: 8px;
+    margin-bottom: -24px;
   }
 
   .check-card {
-    padding: 20px;
+    padding: 18px;
     border: 1px solid var(--line);
     background: var(--surface);
     box-shadow: var(--shadow);
   }
-
   .check-card ul {
-    display: grid;
-    gap: 16px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
+    display: grid;
+    gap: 12px;
   }
-
   .check-card li {
     display: grid;
-    grid-template-columns: 36px 1fr;
+    grid-template-columns: 34px 1fr;
     gap: 10px;
     align-items: start;
   }
-
   .check-card li > span {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -318,217 +260,74 @@ const morePlayNavItems = [
     color: var(--green);
     font-weight: 900;
   }
-
-  .check-card strong {
-    display: block;
-  }
-
-  .check-card p {
-    margin: 2px 0 0;
-    color: var(--muted);
-    font-size: .9rem;
-  }
+  .check-card strong { display: block; }
+  .check-card p { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
 
   .personal-note {
-    margin: 16px 2px 0;
+    margin: 18px 0 0;
+    padding: 16px 18px;
+    border-left: 4px solid var(--lavender-light);
+    background: #faf8fd;
     color: var(--muted);
-    font-size: .92rem;
   }
 
-  .personal-note strong {
-    color: var(--text);
-  }
+  .calculator-section { width: min(100% - 24px, 860px); }
 
-  .device-flow {
-    display: grid;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .device-flow li {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    gap: 12px;
-    padding: 17px;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: var(--surface);
-  }
-
-  .device-flow li > span {
-    width: 44px;
-    height: 44px;
-    display: grid;
-    place-items: center;
-    border-radius: 14px;
-    background: var(--lavender-light);
-    color: var(--lavender-dark);
-    font-size: .82rem;
-    font-weight: 900;
-  }
-
-  .device-flow h3,
-  .device-flow p {
-    margin: 0;
-  }
-
-  .device-flow h3 {
-    font-size: 1rem;
-  }
-
-  .device-flow p {
-    margin-top: 3px;
-    color: var(--muted);
-    font-size: .9rem;
-  }
-
-  .experience-card {
-    margin-top: 16px;
+  .reference-card {
     padding: 20px;
     border: 1px solid var(--line);
-    background: var(--surface-soft);
+    background: var(--surface);
+    box-shadow: var(--shadow);
   }
-
-  .experience-card p {
-    margin: 0;
-  }
-
-  .experience-card p + p {
-    margin-top: 10px;
-  }
-
-  .device-limit-card {
-    display: grid;
-    grid-template-columns: 42px 1fr;
-    gap: 12px;
-    margin-top: 16px;
-    padding: 18px;
-    border: 1px solid #f1df9b;
-    border-radius: 20px;
-    background: var(--yellow-soft);
-  }
-
-  .limit-icon {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: #fff;
-    color: #80661a;
-    font-weight: 900;
-  }
-
-  .device-limit-card h3 {
-    margin: 1px 0 7px;
-    font-size: 1rem;
-  }
-
-  .device-limit-card p {
-    margin: 0;
-    font-size: .9rem;
-  }
-
-  .device-limit-card p + p {
-    margin-top: 8px;
-  }
-
-  .device-limit-card a {
-    display: inline-block;
-    margin-top: 9px;
+  .reference-card h3 { margin-top: 0; }
+  .reference-card p { color: var(--muted); }
+  .reference-card a {
     color: var(--lavender-dark);
-    font-size: .82rem;
     font-weight: 800;
-  }
-
-  .calculator-section {
-    width: min(100% - 24px, 860px);
   }
 
   .stop-grid {
     display: grid;
-    gap: 10px;
+    gap: 12px;
   }
-
   .stop-grid article {
     padding: 18px;
     border: 1px solid var(--line);
     border-radius: 18px;
     background: var(--surface);
   }
+  .stop-grid article > span { font-size: 1.35rem; }
+  .stop-grid h3 { margin: 7px 0 4px; }
+  .stop-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
 
-  .stop-grid article > span {
-    width: 34px;
-    height: 34px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 8px;
-    border-radius: 50%;
-    background: var(--surface-soft);
+  .reference-details {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+    overflow: hidden;
+  }
+  .reference-details summary {
+    cursor: pointer;
+    padding: 16px 18px;
     color: var(--lavender-dark);
     font-weight: 900;
   }
-
-  .stop-grid h3,
-  .stop-grid p {
-    margin: 0;
+  .reference-details .reference-card {
+    margin: 0 14px 14px;
+    box-shadow: none;
   }
 
-  .stop-grid p {
-    margin-top: 3px;
-    color: var(--muted);
-    font-size: .88rem;
-  }
-
-  .reference-card {
-    padding: 22px;
-    border: 1px solid #dce7f5;
-    background: #f4f8ff;
-  }
-
-  .reference-card h3 {
-    margin-top: 0;
-  }
-
-  .reference-card ul {
-    padding-left: 1.2em;
-  }
-
-  .reference-note {
-    margin-bottom: 0;
-    padding-top: 12px;
-    border-top: 1px solid #dce7f5;
-    color: var(--muted);
-    font-size: .88rem;
-  }
-
-  .closing-section {
-    padding-bottom: 46px;
-    text-align: center;
-  }
-
+  .closing-section { text-align: center; }
   .closing-section h2 {
     margin: 6px 0 12px;
-    font-size: clamp(1.65rem, 6vw, 2.35rem);
-    line-height: 1.35;
+    font-size: clamp(1.6rem, 6vw, 2.3rem);
   }
-
-  .closing-section > p:not(.eyebrow) {
-    margin: 0 auto;
-    max-width: 620px;
-    color: var(--muted);
-  }
-
+  .closing-section > p:not(.eyebrow) { color: var(--muted); }
   .back-button {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px;
-    margin-top: 24px;
-    padding: 11px 20px;
-    border: 1px solid var(--lavender-light);
+    margin-top: 18px;
+    padding: 12px 18px;
+    border: 1px solid var(--line);
     border-radius: 999px;
     background: #fff;
     color: var(--lavender-dark);
@@ -537,36 +336,6 @@ const morePlayNavItems = [
   }
 
   @media (min-width: 680px) {
-    .stop-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .stop-grid { grid-template-columns: repeat(3, 1fr); }
   }
-
-  @media (min-width: 780px) {
-    .subhero {
-      padding-top: 72px;
-      padding-bottom: 58px;
-    }
-
-    .intro-section {
-      padding-top: 24px;
-    }
-
-    .notice-card,
-    .reference-card {
-      padding: 26px;
-    }
-
-    .device-flow {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .device-flow li {
-      grid-template-columns: 1fr;
-    }
-  }
-.sub-quick-nav {
-  margin-top: -38px;
-  margin-bottom: -28px;
-}
 </style>

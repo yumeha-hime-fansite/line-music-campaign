@@ -51,9 +51,28 @@
   <MorePlayTeaser />
   <FinalCTA />
 
-  <footer class="site-footer">
-    <p>このサイトはファンによる非公式の参加ガイドです。正式な条件はキャンペーン公式案内をご確認ください。</p>
-  </footer>
+<footer class="site-footer">
+  <p>
+    このサイトはファンによる非公式の参加ガイドです。
+    LINE MUSICおよびアーティスト・関係各所の公式サイトではありません。
+    正式なキャンペーン条件は、公式案内をご確認ください。
+  </p>
+
+  <div class="footer-notes">
+    <p>
+      ※掲載しているキャンペーン画像等は、関係各所より掲載許可を得たものを使用しています。
+      無断転載・二次利用はご遠慮ください。
+    </p>
+    <p>
+      ※掲載されている画像等の著作権・肖像権その他の権利は、それぞれの権利者に帰属します。
+    </p>
+  </div>
+
+  <p class="footer-contact">
+    お問い合わせ：
+    <a href="mailto:amagase.sui@gmail.com">amagase.sui@gmail.com</a>
+  </p>
+</footer>
 </main>
 
 <div class="sticky-cta">

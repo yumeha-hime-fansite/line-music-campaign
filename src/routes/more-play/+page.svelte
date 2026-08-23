@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   import { campaign } from '$lib/data/campaign';
   import PlayCalculator from '$lib/components/PlayCalculator.svelte';
-  import PlayCalculator from '$lib/components/PlayCalculator.svelte';
+  import CompactQuickNav from '$lib/components/CompactQuickNav.svelte';
 
   const siteOrigin = 'https://yumeha-hime-fansite.github.io';
   const canonicalUrl = `${siteOrigin}${base}/more-play/`;

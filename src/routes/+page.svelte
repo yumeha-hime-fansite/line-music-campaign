@@ -27,8 +27,23 @@
   <meta property="og:description" content="難しそうに見える再生キャンペーンも、まずは1回聴くところから。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalUrl} />
-  {#if ogImage}<meta property="og:image" content={ogImage} />{/if}
+  {#if ogImage}
+  <meta property="og:image" content={`${ogImage}?v=20260824`} />
+  <meta property="og:image:secure_url" content={`${ogImage}?v=20260824`} />
+  <meta property="og:image:type" content="image/jpeg" />
+
+  <meta
+    property="og:image:alt"
+    content="夢羽ヒメ LINE MUSIC再生キャンペーン"
+  />
+
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={`${ogImage}?v=20260824`} />
+  <meta
+    name="twitter:image:alt"
+    content="夢羽ヒメ LINE MUSIC再生キャンペーン"
+  />
+{/if}
 </svelte:head>
 
 <main>

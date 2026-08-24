@@ -92,22 +92,56 @@
   <section class="content-section" aria-labelledby="device-title">
     <div class="section-heading">
       <p class="eyebrow">SPARE DEVICE</p>
-      <h2 id="device-title">余っている端末があるなら、使い方を考える選択肢も</h2>
+      <h2 id="device-title">余っているスマホを使う方法も</h2>
       <p>
-        昔使っていたスマホなどが手元にある場合、LINE MUSICを使える端末として活用できないか
-        考える人もいると思います。
+        昔使っていたAndroidやiPhoneが手元にあれば、追加の再生端末として使う方法もあります。
+        ここでは、自分が実際に試しているやり方をひとつの参考例として紹介します。
       </p>
     </div>
 
-    <div class="reference-card">
-      <h3>ここでは、同時再生を回避する具体的な手順は紹介しません</h3>
+    <div class="experience-card">
+      <p class="experience-label">自分の環境で試している方法</p>
+      <ol class="device-steps">
+        <li>
+          <span>1</span>
+          <div>
+            <strong>対象曲を端末にダウンロード</strong>
+            <p>LINE MUSICアプリで、再生したい曲をあらかじめ端末へ保存しておきます。</p>
+          </div>
+        </li>
+        <li>
+          <span>2</span>
+          <div>
+            <strong>オフライン状態で再生を開始</strong>
+            <p>通信を切った状態で、ダウンロードした対象曲の再生を始めます。</p>
+          </div>
+        </li>
+        <li>
+          <span>3</span>
+          <div>
+            <strong>再生を始めたあと、オンラインへ戻す</strong>
+            <p>自分の環境では、この流れで複数端末を使って再生できています。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="caution-card">
+      <strong>あくまで実体験上の一例です</strong>
       <p>
-        LINE MUSICには端末登録や再生に関するルールがあり、キャンペーンごとの条件もあります。
-        複数端末を使う場合は、まず公式ヘルプや今回のキャンペーン案内を確認するのが安心です。
+        この方法はLINE MUSIC公式が複数端末での再生方法として案内しているものではありません。
+        同じ環境で同じように動作することや、再生回数へ反映されることを保証するものでもありません。
+        「余っている端末も使ってみたい」という人が、自分で調べたり試したりするときの参考として載せています。
       </p>
-      <p>
-        「余っている端末があるから、何か使えるかな」くらいの参考情報として載せています。
-      </p>
+    </div>
+
+    <div class="research-box">
+      <p class="research-label">自分で調べるときのキーワード</p>
+      <div class="keyword-list" aria-label="複数端末について調べるキーワード">
+        <span>LINE MUSIC オフライン再生</span>
+        <span>LINE MUSIC 複数端末</span>
+        <span>LINE MUSIC 端末登録</span>
+      </div>
       <a href={lineMusicDeviceHelpUrl} target="_blank" rel="noopener noreferrer">LINE MUSICの端末ヘルプを見る ↗</a>
     </div>
   </section>
@@ -132,24 +166,46 @@
 
   <section class="content-section" aria-labelledby="emulator-title">
     <div class="section-heading">
-      <p class="eyebrow">REFERENCE</p>
-      <h2 id="emulator-title">参考：PC・Androidエミュレータについて</h2>
-      <p>実機以外の利用例として見かけることがあります。</p>
+      <p class="eyebrow">PC / EMULATOR</p>
+      <h2 id="emulator-title">PC・Androidエミュレータという方法も</h2>
+      <p>
+        スマホ以外では、PCからLINE MUSICを使う方法もあります。
+        さらに一歩踏み込むと、PC上でAndroid環境を動かす「Androidエミュレータ」という選択肢もあります。
+      </p>
     </div>
 
-    <details class="reference-details">
-      <summary>参考情報を見る</summary>
-      <div class="reference-card">
-        <p>
-          Androidエミュレータを使ってPC上でLINE MUSICを利用する例もありますが、
-          LINE MUSIC公式の動作保証環境として案内されているわけではありません。
-        </p>
-        <p>
-          安定動作や再生回数への反映を保証できるものでもないため、
-          こういう利用例もある、という参考情報に留めています。
-        </p>
+    <div class="reference-card emulator-card">
+      <h3>Androidエミュレータとは？</h3>
+      <p>
+        Androidエミュレータは、スマートフォンのAndroid環境をPC上で仮想的に動かすソフトです。
+        PCの画面上でAndroidアプリを起動でき、製品によっては複数のAndroid環境を同時に動かす
+        「マルチインスタンス」という機能もあります。
+      </p>
+      <p>
+        自分もLINE MUSICの再生用途でAndroidエミュレータを使ったことがあります。
+        「余っているスマホはないけれどPCならある」という場合に、こういう方法もあると知っておくと
+        調べるきっかけになると思います。
+      </p>
+    </div>
+
+    <div class="emulator-points">
+      <h3>使うなら知っておきたいこと</h3>
+      <ul>
+        <li>Androidエミュレータは、LINE MUSIC公式の動作保証環境として案内されているものではありません。</li>
+        <li>複数のAndroid環境を動かすほど、PCのCPU・メモリなどへの負荷が大きくなります。</li>
+        <li>長時間動かしていると、エミュレータやPC自体が止まることもあります。</li>
+        <li>LINE MUSICやエミュレータ側のアップデートで、動作が変わる可能性もあります。</li>
+      </ul>
+    </div>
+
+    <div class="research-box">
+      <p class="research-label">自分で調べるときのキーワード</p>
+      <div class="keyword-list" aria-label="Androidエミュレータについて調べるキーワード">
+        <span>Android エミュレータ</span>
+        <span>マルチインスタンス</span>
+        <span>Android エミュレータ PC 負荷</span>
       </div>
-    </details>
+    </div>
   </section>
 
   <section class="content-section closing-section" aria-labelledby="closing-title">
@@ -162,28 +218,28 @@
     <a class="back-button" href={`${base}/`}>← 基本の参加ガイドへ戻る</a>
   </section>
 
-<footer class="site-footer">
-  <p>
-    このサイトはファンによる非公式の参加ガイドです。
-    LINE MUSICおよびアーティスト・関係各所の公式サイトではありません。
-    正式なキャンペーン条件は、公式案内をご確認ください。
-  </p>
-
-  <div class="footer-notes">
+  <footer class="site-footer">
     <p>
-      ※掲載しているキャンペーン画像等は、関係各所より掲載許可を得たものを使用しています。
-      無断転載・二次利用はご遠慮ください。
+      このサイトはファンによる非公式の参加ガイドです。
+      LINE MUSICおよびアーティスト・関係各所の公式サイトではありません。
+      正式なキャンペーン条件は、公式案内をご確認ください。
     </p>
-    <p>
-      ※掲載されている画像等の著作権・肖像権その他の権利は、それぞれの権利者に帰属します。
-    </p>
-  </div>
 
-  <p class="footer-contact">
-    お問い合わせ：
-    <a href="mailto:amagase.sui@gmail.com">amagase.sui@gmail.com</a>
-  </p>
-</footer>
+    <div class="footer-notes">
+      <p>
+        ※掲載しているキャンペーン画像等は、関係各所より掲載許可を得たものを使用しています。
+        無断転載・二次利用はご遠慮ください。
+      </p>
+      <p>
+        ※掲載されている画像等の著作権・肖像権その他の権利は、それぞれの権利者に帰属します。
+      </p>
+    </div>
+
+    <p class="footer-contact">
+      お問い合わせ：
+      <a href="mailto:amagase.sui@gmail.com">amagase.sui@gmail.com</a>
+    </p>
+  </footer>
 </main>
 
 <style>
@@ -226,7 +282,11 @@
 
   .notice-card,
   .reference-card,
-  .check-card {
+  .check-card,
+  .experience-card,
+  .caution-card,
+  .research-box,
+  .emulator-points {
     border-radius: 22px;
   }
 
@@ -292,16 +352,96 @@
 
   .calculator-section { width: min(100% - 24px, 860px); }
 
-  .reference-card {
+  .reference-card,
+  .experience-card,
+  .emulator-points {
     padding: 20px;
     border: 1px solid var(--line);
     background: var(--surface);
     box-shadow: var(--shadow);
   }
-  .reference-card h3 { margin-top: 0; }
+  .reference-card h3,
+  .emulator-points h3 { margin-top: 0; }
   .reference-card p { color: var(--muted); }
   .reference-card a {
     color: var(--lavender-dark);
+    font-weight: 800;
+  }
+
+  .experience-card {
+    background: linear-gradient(145deg, #f7f2fd, #fff);
+  }
+  .experience-label {
+    margin: 0 0 14px;
+    color: var(--lavender-dark);
+    font-size: .78rem;
+    font-weight: 900;
+    letter-spacing: .05em;
+  }
+  .device-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 16px;
+  }
+  .device-steps li {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .device-steps li > span {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--lavender-dark);
+    color: #fff;
+    font-weight: 900;
+  }
+  .device-steps strong { display: block; margin-top: 5px; }
+  .device-steps p { margin: 4px 0 0; color: var(--muted); font-size: .9rem; }
+
+  .caution-card {
+    margin-top: 14px;
+    padding: 17px 18px;
+    border: 1px solid #eadfbf;
+    background: #fffaf0;
+  }
+  .caution-card strong { display: block; margin-bottom: 5px; }
+  .caution-card p { margin: 0; color: var(--muted); font-size: .88rem; }
+
+  .research-box {
+    margin-top: 14px;
+    padding: 17px 18px;
+    background: var(--surface-soft);
+  }
+  .research-label {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 900;
+  }
+  .keyword-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .keyword-list span {
+    padding: 7px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font-size: .78rem;
+    font-weight: 800;
+  }
+  .research-box a {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--lavender-dark);
+    font-size: .86rem;
     font-weight: 800;
   }
 
@@ -319,22 +459,17 @@
   .stop-grid h3 { margin: 7px 0 4px; }
   .stop-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
 
-  .reference-details {
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: var(--surface);
-    overflow: hidden;
-  }
-  .reference-details summary {
-    cursor: pointer;
-    padding: 16px 18px;
-    color: var(--lavender-dark);
-    font-weight: 900;
-  }
-  .reference-details .reference-card {
-    margin: 0 14px 14px;
+  .emulator-card { margin-bottom: 14px; }
+  .emulator-points {
     box-shadow: none;
+    background: var(--surface-soft);
   }
+  .emulator-points ul {
+    margin: 10px 0 0;
+    padding-left: 1.25em;
+    color: var(--muted);
+  }
+  .emulator-points li + li { margin-top: 8px; }
 
   .closing-section { text-align: center; }
   .closing-section h2 {

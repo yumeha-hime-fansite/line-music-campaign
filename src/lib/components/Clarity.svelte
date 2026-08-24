@@ -4,19 +4,27 @@
 
   const env = publicEnv as Record<string, string | undefined>;
   const siteVariant = env.PUBLIC_SITE_VARIANT ?? 'develop';
-  const clarityId = env.PUBLIC_CLARITY_ID ?? '';
+
+  // Microsoft Clarity project ID
+  const clarityId = 'y73vjioiin';
 
   onMount(() => {
-    if (siteVariant !== 'production' || !clarityId) return;
+    // developプレビューでは解析しない
+    if (siteVariant !== 'production') return;
+
+    // 二重読み込み防止
     if (document.querySelector('script[data-clarity-loader]')) return;
 
-    const win = window as typeof window & { clarity?: (...args: unknown[]) => void };
+    const win = window as typeof window & {
+      clarity?: (...args: unknown[]) => void;
+    };
 
     if (!win.clarity) {
       const clarity = (...args: unknown[]) => {
         const queueTarget = clarity as typeof clarity & { q?: unknown[][] };
         (queueTarget.q ||= []).push(args);
       };
+
       win.clarity = clarity;
     }
 

@@ -41,7 +41,7 @@ jobs:
         env:
           BASE_PATH: /${{ github.event.repository.name }}
           PUBLIC_SITE_VARIANT: production
-          PUBLIC_CLARITY_ID: ${{ secrets.CLARITY_PROJECT_ID }}
+          PUBLIC_CLARITY_ID: y73vjioiin
         run: |
           npm install
           npm run build

@@ -3,10 +3,7 @@
   import PlayCTA from './PlayCTA.svelte';
 </script>
 
-<!--
-  キャンペーン画像はCampaignInfo側で表示するため、
-  Heroは常に中央1カラムで表示する。
--->
+<!-- キャンペーン画像はCampaignInfo側で表示するため、Heroは常に中央1カラム。 -->
 <section class="hero hero-single section-shell" aria-labelledby="hero-title">
   <div class="hero-copy">
     <p class="eyebrow">夢羽ヒメ LINE MUSIC 再生キャンペーン</p>
@@ -21,22 +18,23 @@
       「参加してみたいけど、やり方を調べるのがちょっと面倒……」
       そんな人向けに、迷いやすいところだけまとめました。
     </p>
-
-    <p class="hero-message">
-      <strong>まずは対象曲を1回聴くところから。</strong>
-    </p>
+    <p class="hero-message"><strong>まずは対象曲を1回聴くところから。</strong></p>
 
     <div class="song-chip" aria-label="今回の対象曲">
       <span class="song-icon" aria-hidden="true">♪</span>
       <div>
         <small>今回の対象曲</small>
         <strong>{campaign.songTitle}</strong>
-        <span>{campaign.campaignPeriod}</span>
+        <span>{campaign.campaignPeriodDisplay}</span>
       </div>
     </div>
 
     <PlayCTA label="LINE MUSICで聴いてみる" placement="hero-play" />
-    <p class="microcopy">たくさん再生するのは、そのあとでもOK。</p>
+    {#if campaign.songUrl}
+      <p class="microcopy">たくさん再生するのは、そのあとでもOK。</p>
+    {:else}
+      <p class="microcopy">アプリで「夢羽ヒメ Cherish」と検索して、対象曲を選んでください。</p>
+    {/if}
   </div>
 
   <style>

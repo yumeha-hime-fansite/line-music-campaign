@@ -20,30 +20,22 @@
 </script>
 
 <svelte:head>
-  <title>{campaign.artistName}｜LINE MUSIC再生キャンペーン参加ガイド</title>
+  <title>{campaign.artistName}「{campaign.songTitle}」｜LINE MUSIC再生キャンペーン参加ガイド</title>
   <meta name="description" content={`${campaign.artistName}「${campaign.songTitle}」のLINE MUSIC再生キャンペーンに、初めてでも迷わず参加するためのファンによる非公式ガイド。`} />
   <link rel="canonical" href={canonicalUrl} />
-  <meta property="og:title" content={`${campaign.artistName}｜LINE MUSIC再生キャンペーン参加ガイド`} />
+  <meta property="og:title" content={`${campaign.artistName}「${campaign.songTitle}」｜LINE MUSIC再生キャンペーン`} />
   <meta property="og:description" content="難しそうに見える再生キャンペーンも、まずは1回聴くところから。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalUrl} />
   {#if ogImage}
-  <meta property="og:image" content={`${ogImage}?v=20260824`} />
-  <meta property="og:image:secure_url" content={`${ogImage}?v=20260824`} />
-  <meta property="og:image:type" content="image/jpeg" />
-
-  <meta
-    property="og:image:alt"
-    content="夢羽ヒメ LINE MUSIC再生キャンペーン"
-  />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content={`${ogImage}?v=20260824`} />
-  <meta
-    name="twitter:image:alt"
-    content="夢羽ヒメ LINE MUSIC再生キャンペーン"
-  />
-{/if}
+    <meta property="og:image" content={`${ogImage}?v=20261008`} />
+    <meta property="og:image:secure_url" content={`${ogImage}?v=20261008`} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="夢羽ヒメ Cherish LINE MUSIC再生キャンペーン" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={`${ogImage}?v=20261008`} />
+    <meta name="twitter:image:alt" content="夢羽ヒメ Cherish LINE MUSIC再生キャンペーン" />
+  {/if}
 </svelte:head>
 
 <main>
@@ -66,28 +58,28 @@
   <MorePlayTeaser />
   <FinalCTA />
 
-<footer class="site-footer">
-  <p>
-    このサイトはファンによる非公式の参加ガイドです。
-    LINE MUSICおよびアーティスト・関係各所の公式サイトではありません。
-    正式なキャンペーン条件は、公式案内をご確認ください。
-  </p>
-
-  <div class="footer-notes">
+  <footer class="site-footer">
     <p>
-      ※掲載しているキャンペーン画像等は、関係各所より掲載許可を得たものを使用しています。
-      無断転載・二次利用はご遠慮ください。
+      このサイトはファンによる非公式の参加ガイドです。
+      LINE MUSICおよびアーティスト・関係各所の公式サイトではありません。
+      正式なキャンペーン条件は、公式案内をご確認ください。
     </p>
-    <p>
-      ※掲載されている画像等の著作権・肖像権その他の権利は、それぞれの権利者に帰属します。
-    </p>
-  </div>
 
-  <p class="footer-contact">
-    お問い合わせ：
-    <a href="mailto:amagase.sui@gmail.com">amagase.sui@gmail.com</a>
-  </p>
-</footer>
+    <div class="footer-notes">
+      <p>
+        ※掲載しているキャンペーン画像等は、関係各所より掲載許可を得たものを使用しています。
+        無断転載・二次利用はご遠慮ください。
+      </p>
+      <p>
+        ※掲載されている画像等の著作権・肖像権その他の権利は、それぞれの権利者に帰属します。
+      </p>
+    </div>
+
+    <p class="footer-contact">
+      お問い合わせ：
+      <a href="mailto:amagase.sui@gmail.com">amagase.sui@gmail.com</a>
+    </p>
+  </footer>
 </main>
 
 <div class="sticky-cta">

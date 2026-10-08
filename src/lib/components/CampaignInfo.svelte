@@ -19,9 +19,8 @@
     <article class="campaign-card reward-card">
       <div class="card-kicker">🎁 個人再生数でもらえる特典</div>
       {#if individualImage}
-        <img class="campaign-image" src={individualImage} alt="個人再生数プレゼントのキャンペーン案内" />
+        <img class="campaign-image" src={individualImage} alt="Cherishの個人再生キャンペーン案内。応募条件と特典の画像" loading="lazy" />
       {/if}
-
       <div class="reward-list">
         {#each campaign.individualRewards as reward}
           <div class="reward-item">
@@ -35,16 +34,14 @@
           </div>
         {/each}
       </div>
-
       <p class="friendly-note">特典の回数まで届かなくても、その再生は総再生数の応援になります。</p>
     </article>
 
     <article class="campaign-card milestone-card">
       <div class="card-kicker">🌟 総再生数で解放される特典</div>
       {#if totalImage}
-        <img class="campaign-image" src={totalImage} alt="総再生回数企画のキャンペーン案内" />
+        <img class="campaign-image" src={totalImage} alt="Cherishの総再生数企画。10万・30万・50万回の特典案内" loading="lazy" />
       {/if}
-
       <ol class="milestone-list">
         {#each campaign.totalMilestones as milestone, index}
           <li>
@@ -57,13 +54,14 @@
           </li>
         {/each}
       </ol>
-
-      <p class="friendly-note">50万・70万・100万回は、参加しているみんなの合計です。1人で目指す数字ではありません。</p>
+      <p class="friendly-note">10万・30万・50万回は、参加しているみんなの合計です。1人で目指す数字ではありません。</p>
     </article>
   </div>
 
   <PlayCTA label="対象曲を聴いてみる" placement="campaign-play" />
   {#if campaign.officialCampaignUrl}
     <a class="text-link" href={campaign.officialCampaignUrl} target="_blank" rel="noopener noreferrer">公式のキャンペーン案内を見る ↗</a>
+  {:else}
+    <a class="text-link" href={campaign.artistXUrl} target="_blank" rel="noopener noreferrer">キャンペーンの最新情報は夢羽ヒメさんの公式Xで確認 ↗</a>
   {/if}
 </section>

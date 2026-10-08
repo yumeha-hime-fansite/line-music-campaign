@@ -10,23 +10,20 @@
     placement?: string;
     compact?: boolean;
   } = $props();
+
+  // 対象曲への直リンクが未確認なら、過去曲には飛ばさずLINE MUSICへ誘導。
+  const fallbackUrl = 'https://music.line.me/top';
 </script>
 
-{#if campaign.songUrl}
-  <a
-    class:compact
-    class="play-cta"
-    href={campaign.songUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    data-cta={placement}
-  >
-    <span aria-hidden="true">♪</span>
-    <span>{label}</span>
-  </a>
-{:else}
-  <span class:compact class="play-cta disabled" aria-disabled="true" title="campaign.ts に楽曲URLを設定してください">
-    <span aria-hidden="true">♪</span>
-    <span>楽曲リンク設定待ち</span>
-  </span>
-{/if}
+<a
+  class:compact
+  class="play-cta"
+  href={campaign.songUrl || fallbackUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-cta={placement}
+  aria-label={campaign.songUrl ? label : 'LINE MUSICを開き、夢羽ヒメのCherishを検索する'}
+>
+  <span aria-hidden="true">♪</span>
+  <span>{campaign.songUrl ? label : 'LINE MUSICで「Cherish」を探す'}</span>
+</a>

@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { campaign } from '$lib/data/campaign';
+</script>
+
 <section class="content-section" aria-labelledby="steps-title">
   <div class="section-heading">
     <p class="eyebrow">START HERE</p>
@@ -17,14 +21,14 @@
       <span class="step-number">02</span>
       <div>
         <h3>ヒメさんの対象曲を再生</h3>
-        <p>このページのボタンから対象曲を開いて、最初から最後まで聴いてみよう。</p>
+        <p>{campaign.songUrl ? 'このページのボタンから対象曲を開いて、最初から最後まで聴いてみよう。' : 'LINE MUSICで「夢羽ヒメ Cherish」を検索して、最初から最後まで聴いてみよう。'}</p>
       </div>
     </li>
     <li>
       <span class="step-number">03</span>
       <div>
         <h3>特典が気になるなら再生回数を確認</h3>
-        <p>LINE MUSICのUser's TOP50で、自分が何回聴いたか確認できます。</p>
+        <p>LINE MUSICのランキング内にある、自分の再生回数の一覧で確認できます。</p>
       </div>
     </li>
   </ol>

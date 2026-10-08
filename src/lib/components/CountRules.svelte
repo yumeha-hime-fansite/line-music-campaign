@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { campaign } from '$lib/data/campaign';
+</script>
+
 <section class="content-section" aria-labelledby="rules-title">
   <div class="section-heading">
     <p class="eyebrow">PLAYBACK</p>
@@ -7,7 +11,7 @@
 
   <div class="safe-card">
     <ul>
-      <li>このページのボタンから対象曲を開く</li>
+      <li>{campaign.songUrl ? 'このページのボタンから対象曲を開く' : 'LINE MUSICで「夢羽ヒメ Cherish」を検索する'}</li>
       <li>LINE MUSICアプリで再生する</li>
       <li>最初から最後までフルで聴く</li>
     </ul>

@@ -21,9 +21,9 @@ export const campaign = {
   songDurationSeconds: 285,
 
   // 以下3つは今回の公式リンク確認後に設定。過去の楽曲・応募先へ誤誘導しない。
-  songUrl: '',
-  officialCampaignUrl: '',
-  applicationUrl: '',
+  songUrl: 'https://lin.ee/WaEMEcZ',
+  officialCampaignUrl: 'https://x.com/hime_yumeha/status/2105942671705686298',
+  applicationUrl: 'https://accounts.google.com/v3/signin/identifier?continue=https://docs.google.com/forms/d/e/1FAIpQLSeEht4WzRPu3vOgCnvaYExgY8Cj3sB_Qe0uW9mW3Ibe123foQ/viewform?usp%3Dsend_form&followup=https://docs.google.com/forms/d/e/1FAIpQLSeEht4WzRPu3vOgCnvaYExgY8Cj3sB_Qe0uW9mW3Ibe123foQ/viewform?usp%3Dsend_form&ltmpl=forms&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1040432656:1791465945257242',
   artistXUrl: 'https://x.com/hime_yumeha',
   applicationDeadline: '2026年12月3日 23:59',
 

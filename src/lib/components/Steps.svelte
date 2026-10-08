@@ -1,0 +1,43 @@
+<script lang="ts">
+  import { campaign } from '$lib/data/campaign';
+</script>
+
+<section class="content-section" aria-labelledby="steps-title">
+  <div class="section-heading">
+    <p class="eyebrow">START HERE</p>
+    <h2 id="steps-title">まず全体像だけ。参加の流れは3ステップ</h2>
+    <p>細かいことはあとで大丈夫。最初に「何をすればいいか」だけ見てみよう。</p>
+  </div>
+
+  <ol class="steps">
+    <li>
+      <span class="step-number">01</span>
+      <div>
+        <h3>LINE MUSICを準備</h3>
+        <p>アプリを入れて、対象曲をフルで聴ける状態にします。</p>
+      </div>
+    </li>
+    <li>
+      <span class="step-number">02</span>
+      <div>
+        <h3>ヒメさんの対象曲を再生</h3>
+        <p>{campaign.songUrl ? 'このページのボタンから対象曲を開いて、最初から最後まで聴いてみよう。' : 'LINE MUSICで「夢羽ヒメ Cherish」を検索して、最初から最後まで聴いてみよう。'}</p>
+      </div>
+    </li>
+    <li>
+      <span class="step-number">03</span>
+      <div>
+        <h3>特典が気になるなら再生回数を確認</h3>
+        <p>LINE MUSICのランキング内にある、自分の再生回数の一覧で確認できます。</p>
+      </div>
+    </li>
+  </ol>
+
+  <div class="success-card">
+    <span aria-hidden="true">🎉</span>
+    <strong>02までできれば、もう応援スタート！</strong>
+    <p>まずは1回から。個人特典が気になる人は、03もチェック。</p>
+  </div>
+
+  <a class="steps-guide-link" href="#beginner-guide">LINE MUSICが初めての方は、下で詳しい手順を見られます ↓</a>
+</section>
